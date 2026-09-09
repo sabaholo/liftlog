@@ -1,0 +1,6 @@
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+# ข้อมูลจริงของผู้ใช้ห้ามอยู่ใน repo โค้ด — อยู่ใน liftlog-data (private) เท่านั้น
+data/private/

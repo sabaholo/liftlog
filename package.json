@@ -1,0 +1,15 @@
+{
+  "name": "liftlog",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Lift Log — สมุดเวทส่วนตัวบน iPhone (PWA, ไม่มี build step, ข้อมูลอยู่ในเครื่อง)",
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "serve": "node tools/serve.mjs",
+    "icons": "node tools/make_icons.mjs"
+  },
+  "devDependencies": {
+    "fake-indexeddb": "^6.2.5"
+  }
+}
