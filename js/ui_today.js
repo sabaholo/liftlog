@@ -77,14 +77,13 @@ function activeCard(ctx, ses) {
 
 function cardRow(ctx, card, { tag = null, kind = '', active = null } = {}) {
   const items = cardItems(card);
-  const mine = items.filter((i) => i.who !== 'nan').length;
-  const nan = items.length - mine;
+  const mine = items.filter((i) => i.who !== 'nan').length; // ท่าของแนนไม่นับ/ไม่แสดง (Rock 9/9 16:58)
   return h('div', { class: `card ${card.demo ? 'demo' : ''}` },
     h('div', { class: 'title' }, card.title || card.id),
     h('div', { class: 'small muted' },
       card.date ? thaiDate(card.date) : 'ไม่มีวันที่',
       card.duration_min ? ` · ${card.duration_min} นาที` : '',
-      ` · ${mine} ท่า`, nan ? ` (+แนน ${nan})` : '',
+      ` · ${mine} ท่า`,
     ),
     h('div', { class: 'mt' }, tag ? pill(tag, kind) : null, card.who ? pill(card.who) : null),
     card.note ? h('details', null, h('summary', null, 'โน้ตใบนี้'), h('p', { class: 'small muted' }, card.note)) : null,

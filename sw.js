@@ -1,6 +1,6 @@
 // sw.js — service worker: แคช shell ให้เปิดได้ตอนออฟไลน์ที่ยิม
 // ออกเวอร์ชันใหม่ = แก้ VERSION (ชื่อแคชเปลี่ยน → ดึง SHELL ใหม่ทั้งชุด → ลบแคชเก่า)
-const VERSION = '0.1.0';
+const VERSION = '0.1.1';
 const CACHE = `liftlog-${VERSION}`;
 const SHELL = [
   './',

@@ -1,7 +1,7 @@
 // util.js — helpers ที่ไม่ผูกกับ DOM หรือ DB (ใช้ได้ทั้งใน browser และ node:test)
 // @ts-check
 
-export const APP_VERSION = '0.1.0';
+export const APP_VERSION = '0.1.1';
 
 /** วันที่แบบ local (ไม่ใช่ UTC) → 'YYYY-MM-DD' */
 export function localDate(d = new Date()) {

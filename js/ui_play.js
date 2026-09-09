@@ -48,12 +48,7 @@ export async function renderPlay(ctx, root, params) {
     root.append(allDone(ctx, ses));
   }
 
-  if (ses.hidden?.length) {
-    root.append(h('details', null,
-      h('summary', null, `ของแนน ${ses.hidden.length} ท่า — ดูอย่างเดียว (จดให้เธอ = รุ่นถัดไป)`),
-      ses.hidden.map((hd) => h('div', { class: 'note-box' }, h('b', null, hd.name), ' ', h('span', { class: 'dim' }, hd.dose), hd.cue ? h('div', { class: 'small dim' }, hd.cue) : null)),
-    ));
-  }
+  // ท่าของแนน (ses.hidden) ไม่แสดงในแอป — Rock 9/9 16:58 "ตัดแนนออกไปจากโปรแกรมก่อน" (ข้อมูลยังอยู่ในการ์ด ไม่ได้ลบ)
 
   root.append(h('div', { class: 'row mt' },
     h('button', { class: 'btn md ghost', onclick: () => addExerciseFlow(ctx, ses, library) }, '＋ เพิ่มท่า'),

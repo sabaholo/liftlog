@@ -98,8 +98,6 @@ export async function renderSessionDetail(ctx, root, id) {
     ));
   });
 
-  if (ses.hidden?.length) root.append(h('details', null, h('summary', null, `ของแนนบนการ์ดใบนี้ ${ses.hidden.length} ท่า (ไม่ได้จด)`), ses.hidden.map((hd) => h('p', { class: 'small muted' }, hd.name, ' · ', hd.dose))));
-
   const note = h('textarea', { placeholder: 'โน้ตเซสชัน (ความรู้สึก · บริเวณที่ไม่สบาย · เครื่องที่เปลี่ยน) — เป็นบันทึกของพี่ ไม่ใช่การวินิจฉัย', value: ses.note || '' });
   note.addEventListener('change', async () => { await repo.setSessionNote(db, ses.id, note.value.trim()); toast('บันทึกโน้ตแล้ว', { kind: 'ok', ms: 1500 }); });
   root.append(h('h2', null, 'โน้ต'), note);

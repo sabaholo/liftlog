@@ -1,6 +1,6 @@
 {
   "name": "liftlog",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "description": "Lift Log — สมุดเวทส่วนตัวบน iPhone (PWA, ไม่มี build step, ข้อมูลอยู่ในเครื่อง)",
   "type": "module",
