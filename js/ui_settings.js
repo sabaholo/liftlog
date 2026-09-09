@@ -50,7 +50,7 @@ export async function renderSettings(ctx, root) {
 
   // ---- ซิงก์ ----
   root.append(h('h2', null, 'ซิงก์กับ Life OS (GitHub repo ส่วนตัว)'));
-  const owner = field({ label: 'GitHub owner', value: await repo.getSetting(db, SYNC_KEYS.owner, ''), placeholder: 'ชื่อบัญชี GitHub', inputmode: 'url' });
+  const owner = field({ label: 'GitHub owner', value: await repo.getSetting(db, SYNC_KEYS.owner, 'sabaholo'), placeholder: 'ชื่อบัญชี GitHub', inputmode: 'url' });
   const repoF = field({ label: 'Repo (private)', value: await repo.getSetting(db, SYNC_KEYS.repo, 'liftlog-data'), placeholder: 'liftlog-data' });
   const branch = field({ label: 'Branch', value: await repo.getSetting(db, SYNC_KEYS.branch, 'main'), placeholder: 'main' });
   const token = field({ label: 'Fine-grained token (สิทธิ์ Contents: read/write เฉพาะ repo นี้)', type: 'password', value: await repo.getSetting(db, SYNC_KEYS.token, ''), placeholder: 'github_pat_…' });
